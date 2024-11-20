@@ -1,4 +1,3 @@
----
 version: "2"
 services:
     www:
@@ -6,7 +5,7 @@ services:
         ports:
             - "80:80"
         volumes:
-            - ./www:/var/www/html/
+            - ./web:/var/www/html/
         links:
             - db
         networks:
@@ -21,7 +20,7 @@ services:
             MYSQL_PASSWORD: 123
             MYSQL_ROOT_PASSWORD: 123
         volumes:
-            - ./dump:/docker-entrypoint-initdb.d
+            - ./data:/docker-entrypoint-initdb.d  # Thay đổi từ 'dump' thành 'data'
             - persistent:/var/lib/mysql
         networks:
             - default

@@ -1,3 +1,3 @@
 <?php
-  echo "Xin chào hoàng Save!";
+  echo "Xin chào Nam ngu!";
 ?>
